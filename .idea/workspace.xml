@@ -29,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -79,6 +79,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="PORT" value="7001" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -230,7 +241,7 @@
       <workItem from="1600068529771" duration="5467000" />
       <workItem from="1600137416710" duration="3333000" />
       <workItem from="1600163989310" duration="12000" />
-      <workItem from="1600168439914" duration="2327000" />
+      <workItem from="1600168439914" duration="14062000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
-<!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
     <!-- CDN Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -43,17 +43,14 @@
     <div class="page-title-clear"></div>
 
     <div class="page-content">
-
-        <div class="tab-controls mr-3 ml-3 tabs-round tab-animated tabs-medium tabs-rounded clearfix shadow-xl mb-4"
-             data-tab-items="2"
-             data-tab-active="bg-highlight activated color-white">
-            <a href="#" class="font-12" data-tab-active data-tab="tab-1">게임</a>
-            <a href="#" class="font-12" data-tab="tab-2">배정</a>
+        <div class="card card-style">
+            <div class="content text-center">
+                <h1 class="text-center font-30 mb-n1">러시안룰렛</h1>
+                <p class="text-center color-highlight font-600" id="displayCnt"></p>
+                <div class="divider mt-4"></div>
+                <!-- 작업 공간 -->
+            </div>
         </div>
-
-        <div class="tab-content" id="tab-1"></div>
-        <div class="tab-content" id="tab-2"></div>
-
     </div>
     <!-- Page content ends here-->
 
@@ -74,27 +71,27 @@
 
         <h6 class="menu-divider">게임</h6>
         <div class="list-group list-custom-small list-menu">
-            <a href="index.html">
+            <a href="gameSadari.html">
                 <i class="fas fa-swimming-pool gradient-red color-white"></i>
                 <span>사다리타기</span>
                 <i class="fa fa-angle-right"></i>
             </a>
-            <a href="index-homepages.html">
+            <a href="gameJebi.html">
                 <i class="fas fa-envelope-open-text gradient-orange color-white"></i>
                 <span>제비뽑기</span>
                 <i class="fa fa-angle-right"></i>
             </a>
-            <a href="index-components.html">
+            <a href="gameDice.html">
                 <i class="fa fa-dice gradient-yellow color-white"></i>
                 <span>주사위대결</span>
                 <i class="fa fa-angle-right"></i>
             </a>
-            <a href="index-pages.html">
+            <a href="gameRussian.html">
                 <i class="fa fa-crosshairs gradient-green color-white"></i>
                 <span>러시안룰렛</span>
                 <i class="fa fa-angle-right"></i>
             </a>
-            <a href="index-projects.html">
+            <a href="gameBottle.html">
                 <i class="fas fa-compass gradient-magenta color-white"></i>
                 <span>병돌리기</span>
                 <i class="fa fa-angle-right"></i>
@@ -134,13 +131,19 @@
         </div>
 
         <h6 class="menu-divider font-10 mt-4">Made with </i> by 가짜개발자 in <span class="copyright-year"></span></h6>
+
     </div>
+
 
 </div>
 <script type="text/javascript" src="../scripts/jquery.js"></script>
 <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="../scripts/custom.js"></script>
-<script type="text/javascript" src="../scripts/index.js"></script>
-
+<script type="text/javascript" src="../scripts/request.js"></script>
 </body>
+
+<script type="text/javascript">
+    var cnt = request.getParameter('cnt');
+    $("#displayCnt").append("인원 "+cnt+"명");
+</script>
 </html>
