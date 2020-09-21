@@ -26,7 +26,15 @@
                 <p class="text-center color-highlight font-600" id="displayCnt"></p>
                 <div class="divider mt-4"></div>
                 <!-- 작업 공간 -->
-
+                꽝개수 :  <button onclick="kkwangMinus()">-</button> <span class="ea">1</span>개 <button onclick="kkwangPlus()">+</button>
+                <div class="col-16" id="papers" style="margin:auto; height: 170px; text-align:center;">
+                </div>
+                <hr>
+                <div class='col-16' id="replayBox" style='text-align:center;' >
+                    <button id="shuffle" onclick="shuffle()">제비섞기</button>
+<!--                    <img id="gogogo" src="../images/gameJebi/lots3.png">
+                    <button id="shake" onclick="shake()">제비흔들기</button>-->
+                </div>
             </div>
         </div>
     </div>
@@ -39,11 +47,17 @@
 <script type="text/javascript" src="../scripts/layout.js"></script>
 <script type="text/javascript" src="../scripts/index.js"></script>
 <script type="text/javascript" src="../scripts/request.js"></script>
+<script type="text/javascript" src="../scripts/gameJebi.js" defer></script>
 </body>
 
 <script type="text/javascript">
     var cnt = request.getParameter('cnt');
     $("#displayCnt").append("인원 "+cnt+"명");
+
+    function shake(){
+
+        $("#gogogo").animate({top: '+=5'}, 50).animate({top: '-=10'}, 100);
+    }
 </script>
 
 </html>
