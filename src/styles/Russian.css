@@ -3,7 +3,6 @@
 
 }
 #bullet{
-    content: '';
     display: block;
     width: 170px;
     position: absolute;
@@ -18,7 +17,6 @@
 }
 
 #muzzle {
-    content: '';
     width:75px;
     position: absolute;
     top: -webkit-calc(50% - 117.5px);
@@ -27,44 +25,38 @@
 }
 
 #bullet3 {
-    content: '';
-    position: absolute;
+    position: fixed;
     top: -webkit-calc(50% - 94.7px);
     left: -webkit-calc(50% - 16.7px);
     z-index: 1;
 }
 #bullet4 {
-    content: '';
-    position: absolute;
+    position: fixed;
     top: -webkit-calc(50% - 67.3px);
     left: -webkit-calc(50% - -30.7px);
     z-index: 1;
 }
 #bullet5 {
-    content: '';
-    position: absolute;
+    position: fixed;
     top: -webkit-calc(50% - 12.7px);
     left: -webkit-calc(50% - -30.7px);
     z-index: 1;
 }
 #bullet1 {
-    content: '';
-    position: absolute;
+    position: fixed;
     top: -webkit-calc(50% - 12.7px);
     left: -webkit-calc(50% - 64px);
     z-index: 1;
 }
 
 #bullet2 {
-    content: '';
-    position: absolute;
+    position: fixed;
     top: -webkit-calc(50% - 67.3px);
     left: -webkit-calc(50% - 64px);
     z-index: 1;
 }
 
 #handle{
-    content: '';
     display: block;
     width: 45px;
     height: 140px;
