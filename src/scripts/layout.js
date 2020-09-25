@@ -121,3 +121,17 @@ function numberSetting() {
 
 layoutSetting();
 numberSetting();
+
+// 인원수 검사
+function cntCheck(gameType, cnt){
+    let isCheck = false;
+
+    for (let i = 0; i < arrCountNum[gameType].length; i++) {
+        if (arrCountNum[gameType][i] == cnt) isCheck = true;
+    }
+    if(!isCheck){
+        alert("인원을 다시 설정해주세요.");
+        history.back();
+    }
+    return isCheck;
+}

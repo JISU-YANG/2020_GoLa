@@ -28,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -70,6 +70,9 @@
       <recent name="Z:\Users\jisuyang\IdeaProjects\GoLA\src\html" />
       <recent name="Z:\Users\jisuyang\IdeaProjects\GoLA" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="Z:\Users\jisuyang\IdeaProjects\GoLA" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="excludedTypes">
@@ -79,17 +82,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="PORT" value="7001" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -241,7 +233,8 @@
       <workItem from="1600068529771" duration="5467000" />
       <workItem from="1600137416710" duration="3333000" />
       <workItem from="1600163989310" duration="12000" />
-      <workItem from="1600168439914" duration="19419000" />
+      <workItem from="1600168439914" duration="21476000" />
+      <workItem from="1600306832849" duration="61060000" />
     </task>
     <servers />
   </component>
@@ -273,5 +266,9 @@
       <screen x="0" y="0" width="1344" height="840" />
     </state>
     <state x="183" y="65" key="SettingsEditor/0.0.1344.840@0.0.1344.840" timestamp="1600070874251" />
+    <state x="494" y="161" width="672" height="678" key="search.everywhere.popup" timestamp="1601015885635">
+      <screen x="62" y="0" width="1282" height="840" />
+    </state>
+    <state x="494" y="161" width="672" height="678" key="search.everywhere.popup/62.0.1282.840@62.0.1282.840" timestamp="1601015885635" />
   </component>
 </project>

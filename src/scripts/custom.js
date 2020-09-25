@@ -1470,6 +1470,7 @@ $(document).ready(function(){
             window.addEventListener('online',  updateOnlineStatus);
             window.addEventListener('offline', updateOfflineStatus);
 
+            /*
             if(pwaNoCache == true){
                 caches.delete('workbox-runtime').then(function() {});
                 sessionStorage.clear()
@@ -1479,6 +1480,7 @@ $(document).ready(function(){
                   });
                 });
             }
+            */
         }
 
         //Externally loaded menu system.

@@ -1,12 +1,12 @@
 // 게임
 arFileName = ["gameSadari","gameJebi","gameDice","gameRussian","gameBottle"];
 arTitle = ["사다리타기","제비뽑기","주사위대결","러시안룰렛","병돌리기"];
-arCount = ["2인 - 8인","2인 - 8인","2인","2인, 3인, 6인","2인 - 8인"];
+arCount = ["3인 - 8인","2인 - 8인","2인","2인, 3인, 6인","2인 - 8인"];
 arKill = ["여러명","여러명","한명","한명","한명"];
 arMission = ["자유","통과/꽝","낮은 합계","통과/꽝","지목"];
 arColor = ["red","orange","yellow","green","magenta"];
 arIcon = ["fas fa-swimming-pool","fas fa-envelope-open-text","fa fa-dice","fa fa-crosshairs","fas fa-compass"];
-arrCountNum = [[2,3,4,5,6,7,8],[2,3,4,5,6,7,8],[2],[2,3,6],[2,3,4,5,6,7,8]];
+arrCountNum = [[3,4,5,6,7,8],[2,3,4,5,6,7,8],[2],[2,3,6],[2,3,4,5,6,7,8]];
 
 // 배정
 arFileName2 = ["castTeam","CastTourna"]
