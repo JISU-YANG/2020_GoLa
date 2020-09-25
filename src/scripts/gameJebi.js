@@ -8,7 +8,6 @@
         $("#papers").append(paper);
     }
 
-
     //꽝 갯수 설정
     function kkwangMinus(){
         kkwang--;
