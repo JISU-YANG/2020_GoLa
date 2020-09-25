@@ -12,7 +12,6 @@
     <!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
     <!-- CDN Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 </head>
 <body class="theme-light">
 
@@ -31,9 +30,7 @@
                 </div>
                 <hr>
                 <div class='col-16' id="replayBox" style='text-align:center;' >
-                    <button id="shuffle" onclick="shuffle()">제비섞기</button>
-<!--                    <img id="gogogo" src="../images/gameJebi/lots3.png">
-                    <button id="shake" onclick="shake()">제비흔들기</button>-->
+                    <button id="shuffle" class="btn btn-full btn-s font-600 font-12 rounded-m gradient-orange" onclick="shuffle()">제비섞기</button>
                 </div>
             </div>
         </div>
@@ -54,10 +51,8 @@
     var cnt = request.getParameter('cnt');
     $("#displayCnt").append("인원 "+cnt+"명");
 
-    function shake(){
 
-        $("#gogogo").animate({top: '+=5'}, 50).animate({top: '-=10'}, 100);
-    }
+
 </script>
 
 </html>
