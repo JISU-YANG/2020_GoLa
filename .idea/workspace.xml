@@ -66,11 +66,11 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="Z:\Users\jisuyang\IdeaProjects\GoLA" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="Z:\Users\jisuyang\IdeaProjects\GoLA\src\html" />
+      <recent name="Z:\Users\jisuyang\IdeaProjects\GoLA" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="Z:\Users\jisuyang\IdeaProjects\GoLA" />
     </key>
   </component>
@@ -82,7 +82,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Unnamed" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="PORT" value="7001" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -96,6 +96,7 @@
         <option name="CLUSTER_NAME" value="mycluster" />
         <option name="CONNECT_TO_MANAGED_SERVER" value="false" />
         <option name="USERNAME" value="weblogic" />
+        <option name="CREDENTIAL_ALIAS" />
       </server-settings>
       <predefined_log_file enabled="true" id="WEBLOGIC_DOMAIN_LOG_FILE" />
       <predefined_log_file enabled="true" id="WEBLOGIC_SERVER_LOG_FILE" />
@@ -151,7 +152,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration default="true" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="PORT" value="7001" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -165,7 +166,6 @@
         <option name="CLUSTER_NAME" value="mycluster" />
         <option name="CONNECT_TO_MANAGED_SERVER" value="false" />
         <option name="USERNAME" value="weblogic" />
-        <option name="CREDENTIAL_ALIAS" />
       </server-settings>
       <predefined_log_file enabled="true" id="WEBLOGIC_DOMAIN_LOG_FILE" />
       <predefined_log_file enabled="true" id="WEBLOGIC_SERVER_LOG_FILE" />
