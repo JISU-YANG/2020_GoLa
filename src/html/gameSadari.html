@@ -8,6 +8,7 @@
     <title>GoLA</title>
     <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/gameSadari.css">
     <link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
     <!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
     <!-- CDN Font -->
@@ -26,7 +27,15 @@
                 <p class="text-center color-highlight font-600" id="displayCnt"></p>
                 <div class="divider mt-4"></div>
                 <!-- 작업 공간 -->
+                <div id="container" style="text-align: center;">
+                    <div id="lineBox">
 
+                    </div>
+                    <div class="textBox">
+                    </div>
+                    <a href="#" onclick="startSadari();" id="btn-start" class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-blue-dark bg-blue-light">시작하기</a>
+                    <a href="#" onclick="resetSadari();" id="btn-reset" class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-blue-dark bg-blue-light">다시하기</a>
+                </div>
             </div>
         </div>
     </div>
@@ -39,11 +48,7 @@
 <script type="text/javascript" src="../scripts/layout.js"></script>
 <script type="text/javascript" src="../scripts/index.js"></script>
 <script type="text/javascript" src="../scripts/request.js"></script>
+<script type="text/javascript" src="../scripts/gameSadari.js"></script>
+
 </body>
-
-<script type="text/javascript">
-    var cnt = request.getParameter('cnt');
-    $("#displayCnt").append("인원 "+cnt+"명");
-</script>
-
 </html>
