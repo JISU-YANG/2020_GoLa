@@ -1,6 +1,6 @@
 .divider{
     height:400px;
-
+    margin-bottom : 10px;
 }
 #bullet{
     display: block;
@@ -15,6 +15,15 @@
     width: 30px;
     display: none;
 }
+#Start{
+    margin : 0px;
+}
+
+#buttonBox {
+    text-align:center;
+}
+
+
 
 #muzzle {
     width:75px;
