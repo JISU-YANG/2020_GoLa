@@ -82,18 +82,17 @@
     transform: translate(-50%,50%);
     display: none;
 }
-#coinA{
+#coinA,
+#coinB{
     position: absolute;
     right:10px;
     bottom: 0px;
-}
 
-#coinB{
-    position:absolute;
-    right:10px;
-    bottom:0px;
 }
-
+#coinA>img,
+#coinB>img{
+    width: 20px;
+    }
 #dpA,
 #dpB{
     text-align: center;
