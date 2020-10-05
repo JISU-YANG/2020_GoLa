@@ -8,6 +8,7 @@
     <title>GoLA</title>
     <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/gameDice.css">
     <link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
     <!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
     <!-- CDN Font -->
@@ -26,7 +27,65 @@
                 <p class="text-center color-highlight font-600" id="displayCnt"></p>
                 <div class="divider mt-4"></div>
                 <!-- 작업 공간 -->
+                <div class="Player1">
+                    <div id="coinA">
+                        <img class="CountA" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountA" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountA" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountA" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountA" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
 
+                    </div>
+                    <h1 id="dpA"></h1>
+                    <h1 id="dpSumA"></h1>
+                    <div id="dice" onclick="throwA();">
+                        <div id="oneA" class="circle">
+                        </div>
+                        <div id="two1A" class="circle">
+                        </div>
+                        <div id="two2A" class="circle">
+                        </div>
+                        <div id="four1A" class="circle">
+                        </div>
+                        <div id="four2A" class="circle">
+                        </div>
+                        <div id="six1A" class="circle">
+                        </div>
+                        <div id="six2A" class="circle">
+                        </div>
+                    </div>
+                </div>
+                <div class="Player2">
+                    <div id="coinB">
+                        <img class="CountB" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountB" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountB" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountB" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+                        <img class="CountB" width="36" src="https://cdn0.iconfinder.com/data/icons/st-patrick-s-day-21/24/Gold_coin_st_patrick_day_clover-512.png" alt="">
+
+                    </div>
+                    <h1 id="dpB"></h1>
+                    <h1 id="dpSumB"></h1>
+                    <div id="dice2" onclick="throwB();">
+                        <div id="oneB" class="circle">
+                        </div>
+                        <div id="two1B" class="circle">
+                        </div>
+                        <div id="two2B" class="circle">
+                        </div>
+                        <div id="four1B" class="circle">
+                        </div>
+                        <div id="four2B" class="circle">
+                        </div>
+                        <div id="six1B" class="circle">
+                        </div>
+                        <div id="six2B" class="circle">
+                        </div>
+                    </div>
+                </div>
+                <div  id="autoPlay" >
+                    <button class="btn btn-s font-600 font-12 rounded-m gradient-yellow" onclick="autoPlay()">자동</button>
+                </div>
             </div>
         </div>
     </div>
@@ -39,6 +98,7 @@
 <script type="text/javascript" src="../scripts/layout.js"></script>
 <script type="text/javascript" src="../scripts/index.js"></script>
 <script type="text/javascript" src="../scripts/request.js"></script>
+<script type="text/javascript" src="../scripts/gameDice.js"></script>
 </body>
 
 <script type="text/javascript">
