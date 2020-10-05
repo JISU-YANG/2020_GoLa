@@ -1,0 +1,124 @@
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+#dice{
+    position: absolute;
+    right: 10px;/*8em*/;
+    top: 90px;/*8em*/;
+    height: 50px;/*3em*/;
+    width: 50px;/*3em*/;
+    border-radius: 15%;
+    background-color: #424242;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px grey;
+    /*float: left;*/
+}
+
+#dice2{
+    position: absolute;
+    right: 10px;/*8em*/;
+    top: 90px;
+    height: 50px;/*3em*/;
+    width: 50px;/*3em*/;
+    border-radius: 15%;
+    background-color: #424242;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.circle{
+    position: absolute;
+    height: 8px/*0.5em*/;
+    width: 8px/*0.5em*/;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+#oneA,
+#oneB{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+}
+#two1A,
+#two1B{
+    left: 25%;
+    top: 25%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+#two2A,
+#two2B{
+    right: 25%;
+    bottom: 25%;
+    transform: translate(50%,50%);
+    display: none;
+}
+#four1A,
+#four1B{
+    right: 25%;
+    top: 25%;
+    transform: translate(50%,-50%);
+    display: none;
+}
+#four2A,
+#four2B{
+    left: 25%;
+    bottom: 25%;
+    transform: translate(-50%,50%);
+    display: none;
+}
+#six1A,
+#six1B{
+    right: 25%;
+    top: 50%;
+    transform: translate(50%,-50%);
+    display: none;
+}
+#six2A,
+#six2B{
+    left: 25%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    display: none;
+}
+#coinA{
+    position: absolute;
+    right:10px;
+    bottom: 0px;
+}
+
+#coinB{
+    position:absolute;
+    right:10px;
+    bottom:0px;
+}
+
+#dpA,
+#dpB{
+    text-align: center;
+    font-size : 18pt;
+    height: 50px;
+}
+#dpSumA,
+#dpSumB{
+    text-align: center;
+    font-size : 45pt;
+    height: 50px;
+}
+
+.Player1,
+.Player2{
+    position: relative;
+    height : 180px;
+    margin-bottom:20px;
+}
+
+#br1{
+    margin-top: 200px;
+}
+
+#autoPlay{
+    position: relative;
+    margin-bottom: 10px;
+}

@@ -31,7 +31,7 @@ function Start(){
          }
      );
      setTimeout(function(){
-          $("#bullet").attr('src','../images/Russian/emptyBullet.png');
+          $("#bullet").attr('src','../images/gameRussian/emptyBullet.png');
           $(".bulletOne").css('display','block');
      },3000);
 
@@ -85,7 +85,7 @@ function rePlay(){
 //    $("#bullet").css('transform','rotate(3600deg)');
     $(".divider").css('background','white');
     $("#title").text("");
-    $("#bullet").attr('src','../images/Russian/Bullet.png');
+    $("#bullet").attr('src','../images/gameRussian/Bullet.png');
     $(".bulletOne").css('display','none');
     $("#rePlay").attr('onclick','Start()');
     $("#rePlay").text('시작');
