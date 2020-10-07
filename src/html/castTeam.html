@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="kr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"/>
+    <title>GoLA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
+    <!-- CDN Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <style type="text/css">
+        #teamArea {
+
+        }
+
+        .teamBox {
+            text-align: left;
+        }
+
+        .teamTitle, .teamList {
+            display: inline-block;
+        }
+
+        .teamTitle {
+            margin-right: 10px;
+            padding: 0 4px;
+        }
+
+        .teamList {
+            border-bottom: 1px solid;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body class="theme-light">
+
+<div id="preloader">
+    <div class="spinner-border color-highlight" role="status"></div>
+</div>
+
+<div id="page">
+    <div class="page-content">
+        <div class="card card-style">
+            <div class="content text-center">
+                <h1 class="text-center font-30 mb-n1">팀 나누기</h1>
+                <p class="text-center color-highlight font-600" id="displayCnt"></p>
+                <div class="divider mt-4"></div>
+                <!-- 작업 공간 -->
+                <div id="teamArea">
+                    <div class="textBox">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="card card-style" id="setTeam">
+
+            <div class="content mb-0">
+                <h4>팀 개수</h4>
+                <p>2~8개의 팀으로 배정할 수 있습니다.</p>
+                <div class="row">
+                    <div class="mx-auto">
+                        <div class="stepper rounded-s float-left">
+                            <a href="#" class="stepper-sub"><i class="fa fa-minus color-red-dark"></i></a>
+                            <input type="number" min="2" max="8" value="2" required>
+                            <a href="#" class="stepper-add"><i class="fa fa-plus color-green-dark"></i></a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="divider mt-4"></div>
+                <a href="#" onclick="startTeam();" id="btn-teamStart"
+                   class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-blue-dark bg-blue-light">배정하기</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../scripts/jquery.js"></script>
+<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+<script type="text/javascript" src="../scripts/vo.js"></script>
+<script type="text/javascript" src="../scripts/layout.js"></script>
+<script type="text/javascript" src="../scripts/index.js"></script>
+<script type="text/javascript" src="../scripts/request.js"></script>
+<script type="text/javascript">
+    let cnt = 1;
+    let arName;
+
+    function startTeam() {
+        $("input[value='']").remove();
+        let cnt = $("input[type=number]").val();
+
+        if (cnt >= 2 && cnt <= 8) {
+            arName = new Array($("input").length - 1);
+            for (let i = 0; i < $("input").length - 1; i++) {
+                arName[i] = $("input").eq(i).val();
+            }
+            printTeam(makeTeam(arName, $("input:last").val()));
+        } else {
+            alert("2 ~ 8 팀만 설정할 수 있습니다.");
+        }
+
+
+    }
+
+    function addInput() {
+        let inputCode =
+            "                    <div class=\"input-team-name input-style input-style-2\" id='input-team-name" + cnt + "'>\n" +
+            "                            <span class=\"color-highlight input-style-1-active input-style-1-inactive\">팀원 " + cnt + "</span>\n" +
+            "                            <input type=\"text\" placeholder=\"이름을 입력해주세요.\" onkeyup='addInputCheck(" + cnt + ")' onfocusout='deleteInputCheck(" + cnt++ + ")' required=\"required\">\n" +
+            "                        </div>";
+
+        $(".textBox").append(inputCode);
+    }
+
+    function deleteInput(i) {
+        let target = $("#input-team-name" + i).remove();
+        cnt--;
+    }
+
+    function deleteInputCheck(i) {
+        let target = $("#input-team-name" + (i + 1) + " > input");
+        setTimeout(function () {
+            if (target.length && target.val().length == 0) {
+                deleteInput(i + 1);
+            }
+        }, 1000);
+
+    }
+
+    function addInputCheck(i) {
+        // 현재 작성하고 있는 인풋의 글자가 입력되면
+        let targetPre = $("#input-team-name" + (i - 1)).length;
+        let target = $("#input-team-name" + i + " > input");
+        let targetNext = $("#input-team-name" + (i + 1)).length;
+        if (targetPre) {
+            $("#input-team-name" + (i - 1) + " > input").attr("readonly", true);
+        }
+        if (target.val().length > 0) {
+            if (!targetNext) {
+                addInput();
+            }
+        } else {
+            if (targetNext) {
+                deleteInput(i + 1);
+            }
+
+        }
+
+    }
+
+    // 인원 이름 받아오기
+    // arName = ['김범수', '나얼', '박효신', '이수', '신용재'];
+
+    //printTeam(makeTeam(arName, 2));
+
+    function printTeam(arTeam) {
+        $("#setTeam").remove();
+        $("#teamArea").empty();
+        let codeList = '';
+
+        for (let i = 0; i < arTeam.length; i++) {
+            codeList += '<div class="teamBox">' +
+                '<div class="teamTitle text-uppercase font-900 bg-' + arColor[(i % 5)] + '-light">Team ' + (i + 1) + '</div>';
+            for (let j = 0; j < arTeam[0].length; j++) {
+                if (arTeam[i][j] == undefined) continue;
+                codeList += '<div class="teamList border-' + arColor[(i % 5)] + '-dark">' + arTeam[i][j] + '</div>';
+            }
+            codeList += '</div><br/>';
+        }
+        codeList += '<a href="#" onclick="history.go(0);" class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-red-dark bg-red-light">다시하기</a>\n';
+
+        $("#teamArea").append(codeList);
+    }
+
+    // arName : 전체 인원 리스트, numTeam : 나눌 팀의 수
+    // return: array[팀][인원] 2차원 배열
+    function makeTeam(arName, numTeam) {
+        arName = shuffle(arName);
+
+        // 팀 설정
+        let arrTeam = new Array(numTeam - 1);
+        for (let i = 0; i < numTeam; i++) {
+            arrTeam[i] = new Array(Math.ceil(arName.length / numTeam));
+        }
+        let x = 0,
+            y = 0;
+        for (let i = 0; i < arName.length; i++) {
+            if (i != 0 && i % numTeam == 0) [x, y] = [0, y + 1];
+            arrTeam[x++][y] = arName[i];
+        }
+
+        return arrTeam;
+    }
+
+    function shuffle(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    $(document).ready(function () {
+        addInput();
+
+        $('input[type="number"]').on('keyup', function () {
+            v = parseInt($(this).val());
+            min = parseInt($(this).attr('min'));
+            max = parseInt($(this).attr('max'));
+
+            /*if (v < min){
+                $(this).val(min);
+            } else */
+            if (v > max) {
+                $(this).val(max);
+            }
+        })
+    })
+</script>
+</body>
+
+</html>
