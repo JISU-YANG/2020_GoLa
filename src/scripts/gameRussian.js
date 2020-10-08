@@ -1,12 +1,14 @@
-var rotation = 3660; //회전각도
-var bang = [1,0,0,0,0,0]; //임의의 총알
-var count = 0; //발사횟수
+cntCheck(3, cnt);
+
+let rotation = 3660; //회전각도
+let bang = [1,0,0,0,0,0]; //임의의 총알
+let count = 0; //발사횟수
 
 
 //총알 섞기
 function shuffle(){
-    var j, x, y;
-    for(var i=0; i<999; i++){
+    let j, x, y;
+    for(let i=0; i<999; i++){
         j = Math.floor(Math.random() * 6);
         y = j-1;
         x = bang[j];
@@ -42,8 +44,9 @@ function Start(){
 
 }
 
-
+//발사
 function Fire(){
+    //탄창 회전 애니메이션
     $('#bullet').animate(
         { deg: rotation },
         { duration: 300, step: function(now) {
@@ -71,6 +74,7 @@ function Fire(){
     count++;
 }
 
+//다시하기
 function rePlay(){
     rotation = 3660;
     count = 0;
