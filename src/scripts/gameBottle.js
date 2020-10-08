@@ -24,7 +24,8 @@ function drawChart() {
     var options = {
         tooltip: { trigger: 'none' },
         legend: 'none',
-        pieSliceText: 'none'
+        pieSliceText: 'none',
+        backgroundColor: 'transparent'
     };
 
     // Instantiate and draw our chart, passing in some options.
