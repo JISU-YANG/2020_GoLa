@@ -83,7 +83,7 @@ function printTeam(arTeam) {
         }
         codeList += '</div><br/>';
     }
-    codeList += '<a href="#" onclick="history.go(0);" class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-red-dark bg-red-light">다시하기</a>\n';
+    codeList += '<a href="#" onclick="location.reload();" class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-red-dark bg-red-light">다시하기</a>\n';
 
     $("#teamArea").append(codeList);
 }
@@ -118,17 +118,4 @@ function shuffle(a) {
 
 $(document).ready(function () {
     addInput();
-
-    $('input[type="number"]').on('keyup', function () {
-        v = parseInt($(this).val());
-        min = parseInt($(this).attr('min'));
-        max = parseInt($(this).attr('max'));
-
-        /*if (v < min){
-            $(this).val(min);
-        } else */
-        if (v > max) {
-            $(this).val(max);
-        }
-    })
 })
