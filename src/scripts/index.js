@@ -22,8 +22,24 @@ function defaultListSet(){
     }
 
 // 배정 리스트 생성
-    for(var i = 0; i < arTitle2.length; i++) {
-        var castList = "" +
+    castList = "" +
+        "           <div class=\"card card-style\">\n" +
+        "                <div class=\"content\">\n" +
+        "                    <h2>"+arTitle2[0]+"</h2>\n" +
+        "                    <h5 class=\"font-11 opacity-30 line-height-s mb-3\">"+arSummary[0]+"</h5>\n" +
+        "                    <div class=\"row mb-0\">\n" +
+        "                        <div class=\"col-8\">\n" +
+        "                            <span class=\"badge bg-"+arColor2[0]+"-dark pm1\">"+arCount2[0]+"</span>\n" +
+        "                        </div>\n" +
+        "                        <div class=\"col-4\">\n" +
+        "                            <a href=\"../html/castTeam.html\" target=\"_self\" class=\"btn btn-full btn-s font-600 font-12 rounded-m gradient-"+arColor2[0]+"\">시작</a>\n" +
+        "                        </div>\n" +
+        "                    </div>\n" +
+        "                </div>\n" +
+        "            </div>";
+
+    for(var i = 1; i < arTitle2.length; i++) {
+        castList += "" +
             "           <div class=\"card card-style\">\n" +
             "                <div class=\"content\">\n" +
             "                    <h2>"+arTitle2[i]+"</h2>\n" +
@@ -33,7 +49,7 @@ function defaultListSet(){
             "                            <span class=\"badge bg-"+arColor2[i]+"-dark pm1\">"+arCount2[i]+"</span>\n" +
             "                        </div>\n" +
             "                        <div class=\"col-4\">\n" +
-            "                            <a href=\"#\" target=\"_self\" class=\"btn btn-full btn-s font-600 font-12 rounded-m gradient-"+arColor2[i]+"\">시작</a>\n" +
+            "                            <a href=\"#\" data-menu=\"menu-"+arFileName2[i]+"\" target=\"_self\" class=\"btn btn-full btn-s font-600 font-12 rounded-m gradient-"+arColor2[i]+"\">시작</a>\n" +
             "                        </div>\n" +
             "                    </div>\n" +
             "                </div>\n" +

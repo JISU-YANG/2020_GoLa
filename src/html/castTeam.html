@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="kr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"/>
+    <title>GoLA</title>
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/castTeam.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
+    <!-- CDN Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+</head>
+<body class="theme-light">
+
+<div id="preloader">
+    <div class="spinner-border color-highlight" role="status"></div>
+</div>
+
+<div id="page">
+    <div class="page-content">
+        <div class="card card-style">
+            <div class="content text-center">
+                <h1 class="text-center font-30 mb-n1">팀 나누기</h1>
+                <p class="text-center color-highlight font-600" id="displayCnt"></p>
+                <div class="divider mt-4"></div>
+                <!-- 작업 공간 -->
+                <div id="teamArea">
+                    <div class="textBox">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="card card-style" id="setTeam">
+
+            <div class="content mb-0">
+                <h4>팀 개수</h4>
+                <p>2~8개의 팀으로 배정할 수 있습니다.</p>
+                <div class="row">
+                    <div class="mx-auto">
+                        <div class="stepper rounded-s float-left">
+                            <a href="#" class="stepper-sub"><i class="fa fa-minus color-red-dark"></i></a>
+                            <input type="number" min="2" max="8" value="2" required>
+                            <a href="#" class="stepper-add"><i class="fa fa-plus color-green-dark"></i></a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="divider mt-4"></div>
+                <a href="#" onclick="startTeam();" id="btn-teamStart"
+                   class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-blue-dark bg-blue-light">배정하기</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../scripts/jquery.js"></script>
+<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+<script type="text/javascript" src="../scripts/vo.js"></script>
+<script type="text/javascript" src="../scripts/layout.js"></script>
+<script type="text/javascript" src="../scripts/index.js"></script>
+<script type="text/javascript" src="../scripts/request.js"></script>
+<script type="text/javascript" src="../scripts/castTeam.js"></script>
+</body>
+
+</html>
