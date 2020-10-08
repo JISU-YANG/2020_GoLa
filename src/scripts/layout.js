@@ -135,3 +135,17 @@ function cntCheck(gameType, cnt){
     }
     return isCheck;
 }
+
+// 배정 인원수 검사
+function cntCheck2(gameType, cnt){
+    let isCheck = false;
+
+    for (let i = 0; i < arrCountNum2[gameType].length; i++) {
+        if (arrCountNum2[gameType][i] == cnt) isCheck = true;
+    }
+    if(!isCheck){
+        alert("인원을 다시 설정해주세요.");
+        history.back();
+    }
+    return isCheck;
+}
