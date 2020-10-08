@@ -57,7 +57,14 @@ function layoutSetting() {
         "        <h6 class=\"menu-divider\">배정</h6>\n" +
         "        <div class=\"list-group list-custom-small list-menu\">\n";
 
-    for (let j = 0; j < arTitle2.length; j++) {
+        menuCode +=
+        "            <a target=\"_self\" href=\"../html/castTeam.html\">\n" +
+        "                <i class=\""+arIcon2[0]+" gradient-"+arColor2[0]+" color-white\"></i>\n" +
+        "                <span>"+arTitle2[0]+"</span>\n" +
+        "                <i class=\"fa fa-angle-right\"></i>\n" +
+        "            </a>\n";
+
+    for (let j = 1; j < arTitle2.length; j++) {
         menuCode +=
             "            <a href=\"#\" data-menu=\"menu-"+arFileName2[j]+"\">\n" +
             "                <i class=\""+arIcon2[j]+" gradient-"+arColor2[j]+" color-white\"></i>\n" +
@@ -117,6 +124,30 @@ function numberSetting() {
             "    </div>";
         $("#page").append(countList);
     }
+
+    for(var i=1; i<arFileName2.length;i++){
+        var menuOption = "";
+        for(var j=0; j<arrCountNum2[i].length;j++){
+            menuOption += "                <a target=\"_self\" href=\""+arFileName2[i]+".html?cnt="+arrCountNum2[i][j]+"\"><span>"+arrCountNum2[i][j]+"명</span><i class=\"fa fa-angle-right\"></i></a>\n";
+        }
+        var countList =
+            "<div id=\"menu-"+arFileName2[i]+"\"\n" +
+            "         class=\"menu menu-box-modal rounded-m\"\n" +
+            "         data-menu-height=\""+(100+(arrCountNum2[i].length)*50)+"\"\n" +
+            "         data-menu-width=\"300\">\n" +
+            "        <div class=\"menu-title\">\n" +
+            "            <h1 class=\"font-24\">참가인원</h1>\n" +
+            "            <a href=\"#\" class=\"close-menu\"><i class=\"fa fa-times-circle\"></i></a>\n" +
+            "        </div>\n" +
+            "        <div class=\"mr-3 ml-3 mt-3\">\n" +
+            "            <div class=\"list-group list-custom-small\">\n" + menuOption +
+            "            </div>\n" +
+            "            <div class=\"clear\"></div>\n" +
+            "        </div>\n" +
+            "    </div>";
+        $("#page").append(countList);
+    }
+
 }
 
 layoutSetting();
