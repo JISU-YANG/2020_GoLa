@@ -1,8 +1,9 @@
-.divider{
-    height:400px;
-    margin-bottom : 10px;
+.backArea {
+    height: 300px;
+    margin-bottom: 100px;
 }
-#bullet{
+
+#bullet {
     display: block;
     width: 170px;
     position: absolute;
@@ -11,22 +12,23 @@
     left: -webkit-calc(50% - 87px);
     z-index: 2;
 }
-.bulletOne{
+
+.bulletOne {
     width: 30px;
     display: none;
 }
-#Start{
-    margin : 0px;
+
+#Start {
+    margin: 0px;
 }
 
 #buttonBox {
-    text-align:center;
+    text-align: center;
 }
 
 
-
 #muzzle {
-    width:75px;
+    width: 75px;
     position: absolute;
     top: -webkit-calc(50% - 117.5px);
     left: -webkit-calc(50% - 39px);
@@ -39,18 +41,21 @@
     left: -webkit-calc(50% - 16.7px);
     z-index: 1;
 }
+
 #bullet4 {
     position: absolute;
     top: -webkit-calc(50% - 67.3px);
     left: -webkit-calc(50% - -30.7px);
     z-index: 1;
 }
+
 #bullet5 {
     position: absolute;
     top: -webkit-calc(50% - 12.7px);
     left: -webkit-calc(50% - -30.7px);
     z-index: 1;
 }
+
 #bullet1 {
     position: absolute;
     top: -webkit-calc(50% - 12.7px);
@@ -65,7 +70,7 @@
     z-index: 1;
 }
 
-#handle{
+#handle {
     display: block;
     width: 45px;
     height: 140px;
@@ -78,9 +83,9 @@
     box-shadow: black 0 5px 30px, #420 25px 100px 0, #420 0px 100px 0, #420 -25px 100px 0;
 }
 
-#title{
+#title {
     position: absolute;
-     z-index: 99999;
-     top: -webkit-calc(22%);
-     left: -webkit-calc(42%);
+    z-index: 99999;
+    top: -webkit-calc(22%);
+    left: -webkit-calc(42%);
 }

@@ -65,7 +65,7 @@ function Fire(){
     if(bang[count] == 0){
         $("#title").text("생존!");
     }else{
-        $(".divider").css('background','red');
+        $(".backArea").css('background','red');
         $("#title").text("사망!");
         $("#Fire").attr('onclick','rePlay()');
         $("#Fire").text('다시하기');
@@ -87,7 +87,7 @@ function rePlay(){
              }
          );
 //    $("#bullet").css('transform','rotate(3600deg)');
-    $(".divider").css('background','white');
+    $(".backArea").css('background','white');
     $("#title").text("");
     $("#bullet").attr('src','../images/gameRussian/Bullet.png');
     $(".bulletOne").css('display','none');
