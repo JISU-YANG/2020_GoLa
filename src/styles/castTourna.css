@@ -22,16 +22,6 @@
     width: 36px;
 }
 
-/*.jb-top {
-    vertical-align: top;
-}
-.jb-middle {
-    vertical-align: middle;
-}
-.jb-bottom {
-    vertical-align: bottom;
-}*/
-
 .line{
     border-left:2px solid blue;
     margin-left: 17px;
@@ -42,18 +32,27 @@
     border-left:2px solid blue;
     border-bottom:2px solid blue;
     margin-left: 17px;
-    margin-top: -15px;
+    margin-top: -2.5px;
     height: 15px;
     width: 20px;
 }
 .line-downLeft{
     border-right:2px solid blue;
     border-bottom:2px solid blue;
-    margin-top: -15px;
+    margin-top: -2.5px;
     height: 15px;
     width: 19px;
 }
 .line-upRight{
+    border-left:2px solid blue;
+    border-top:2px solid blue;
+    margin-left: 17px;
+    margin-top: 12.5px;
+    height: 15px;
+    width: 20px;
+}
+
+.line-upRight2{
     border-left:2px solid blue;
     border-top:2px solid blue;
     margin-left: 17px;
@@ -63,7 +62,7 @@
 .line-downLeft2{
      border-right:2px solid blue;
     border-bottom:2px solid blue;
-    margin-top: -15px;
+    margin-top: -2.5px;
     height: 16.5px;
     width: 19px;
 }
@@ -71,19 +70,26 @@
     border-left:2px solid blue;
     border-bottom:2px solid blue;
     margin-left: 17px;
-    margin-top: -15px;
+    margin-top: -2.5px;
     height: 16.5px;
     width: 20px;
 }
-
 .line-upLeft{
+    border-right:2px solid blue;
+    border-top:2px solid blue;
+    margin-top: 12.5px;
+    height: 15px;
+    width: 19px;
+}
+.line-upLeft2{
     border-right:2px solid blue;
     border-top:2px solid blue;
     height: 15px;
     width: 19px;
 }
 .line-upHorizon{
-    border-top:2px solid blue;
+    border-bottom:2px solid blue;
+    margin-top: -1px;
     height: 15px;
     width: 36px;
 }
@@ -93,3 +99,19 @@
     line-height:10px;
 
 }
+
+#Champion1{
+    position: absolute;
+    width: 50px;
+    z-index : 999;
+    top:50%;
+    left:30%;
+}
+#Champion2{
+    position: absolute;
+    width: 50px;
+    z-index : 999;
+    top:50%;
+    right:30%;
+}
+
