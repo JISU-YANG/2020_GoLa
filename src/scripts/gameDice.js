@@ -24,6 +24,8 @@ function throwDice(player) {
     //코인 모두 소진시 최종 합산
     if(coin[numType] == 6){
         document.getElementById("dpSum"+player).innerHTML = sum[numType];
+        $("#autoButton").text('다시하기');
+        $("#autoButton").attr('onclick','location.reload();');
     }
 
     //플레이어A,B의 코인 모두 소진시 승자 결과표기
