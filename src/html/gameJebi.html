@@ -25,13 +25,30 @@
                 <p class="text-center color-highlight font-600" id="displayCnt"></p>
                 <div class="divider mt-4"></div>
                 <!-- 작업 공간 -->
-                꽝개수 :  <button onclick="kkwangMinus()">-</button> <span class="ea">1</span>개 <button onclick="kkwangPlus()">+</button>
-                <div class="col-16" id="papers" style="margin:auto; height: 170px; text-align:center;">
+                <div id="boardJebi">
+                    <div class="row">
+                        <div class="mx-auto">
+                            <div class="stepper rounded-s float-left">
+                                <a href="#" class="stepper-sub"><i class="fa fa-minus color-red-dark"></i></a>
+                                <input type="number" id="kkwang" min="2" max="8" value="2" required>
+                                <a href="#" class="stepper-add"><i class="fa fa-plus color-green-dark"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <p></p>
+
+                    <div class="divider mt-4"></div>
+                    <a href="#" onclick="shuffle();"
+                       class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-blue-dark bg-blue-light">제비섞기</a>
                 </div>
-                <hr>
-                <div class='col-16' id="replayBox" style='text-align:center;' >
-                    <button id="shuffle" class="btn btn-s font-600 font-12 rounded-m gradient-orange" onclick="shuffle()">제비섞기</button>
+                <div id="boardResult" style="display:none;">
+                    <div class="col-16" id="papers" style="margin:auto; text-align:center;">
+                    </div>
+                    <a href="#" onclick="resetJebi();"
+                       class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s  border-blue-red bg-red-light">다시섞기</a>
                 </div>
+
             </div>
         </div>
     </div>
