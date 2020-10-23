@@ -12,7 +12,7 @@ function printInput() {
             "                    <div class=\"text-penalty input-style input-style-2 input-required\">\n" +
             "                            <span class=\"color-highlight input-style-1-active input-style-1-inactive\">이름 " + i + "</span>\n" +
             "                            <em><i class=\"fa fa-exclamation-triangle color-red-light\"></i></em>\n" +
-            "                            <input class=\"name\" type=\"text\" placeholder=\"이름입력\" value='이창1"+i+"'>\n" +
+            "                            <input class=\"name\" type=\"text\" placeholder=\"이름입력\" value="+i+"'>\n" +
             "                        </div>";
 
         $(".textBox").prepend(textPenaltyCode);
@@ -254,8 +254,6 @@ function winnerUp(){
             }else{
                 $(".jb-table-row").eq(3).find(".jb-table-cell-value").eq(0).text($(this).text());
                 $(".jb-table-cell-value").off('click');
-                $(".jb-table").append("<img src='../image/castTourna/Champion.jpg' id='Champion1'>");
-                $(".jb-table").append("<img src='../image/castTourna/Champion.jpg' id='Champion2'>");
             }
         });
         $(".jb-table-row").eq(4).find(".jb-table-cell-value").click(function(){
@@ -263,8 +261,6 @@ function winnerUp(){
             }else{
                 $(".jb-table-row").eq(3).find(".jb-table-cell-value").eq(0).text($(this).text());
                 $(".jb-table-cell-value").off('click');
-                $(".jb-table").append("<img src='../image/castTourna/Champion.jpg' id='Champion1'>");
-                $(".jb-table").append("<img src='../image/castTourna/Champion.jpg' id='Champion2'>");
             }
 
         });
@@ -298,8 +294,6 @@ function winnerUp(){
             }else{
                 $(".jb-table-row").eq(2).find(".jb-table-cell-value").eq(0).text($(this).text());
                 $(".jb-table-cell-value").off('click');
-                $(".jb-table").append("<img src='../image/castTourna/Champion.jpg' id='Champion1'>");
-                $(".jb-table").append("<img src='../image/castTourna/Champion.jpg' id='Champion2'>");
             }
         });
         $(".jb-table-row").eq(3).find(".jb-table-cell-value").click(function(){
@@ -307,8 +301,6 @@ function winnerUp(){
             }else{
                 $(".jb-table-row").eq(2).find(".jb-table-cell-value").eq(0).text($(this).text());
                 $(".jb-table-cell-value").off('click');
-                $(".jb-table").append("<img src='../images/castTourna/Champion.jpg' id='Champion1'>");
-                $(".jb-table").append("<img src='../images/castTourna/Champion.jpg' id='Champion2'>");
             }
         });
     }

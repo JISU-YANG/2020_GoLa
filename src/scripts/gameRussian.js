@@ -23,7 +23,7 @@ function shuffle(){
 //탄창 빈탄창으로 이미지 교체
      //총알 각각 넣기
 //시작버튼
-function Start(){
+function start(){
      $('#bullet').animate(
          { deg: 3600 },
          { duration: 3000, step: function(now) {
@@ -39,13 +39,13 @@ function Start(){
 
      shuffle();
      $("#Start").text('발사');
-     $("#Start").attr('onclick','Fire()');
+     $("#Start").attr('onclick','fire()');
      $("#Start").attr('id','Fire');
 
 }
 
 //발사
-function Fire(){
+function fire(){
     //탄창 회전 애니메이션
     $('#bullet').animate(
         { deg: rotation },
@@ -67,6 +67,8 @@ function Fire(){
     }else{
         $(".backArea").css('background','red');
         $("#title").text("사망!");
+        $(this).attr("data-vibrate","1");
+        activate_vibration();
         $("#Fire").attr('onclick','rePlay()');
         $("#Fire").text('다시하기');
         $("#Fire").attr('id','rePlay');
@@ -86,12 +88,16 @@ function rePlay(){
                  }
              }
          );
-//    $("#bullet").css('transform','rotate(3600deg)');
     $(".backArea").css('background','white');
     $("#title").text("");
     $("#bullet").attr('src','../images/gameRussian/Bullet.png');
     $(".bulletOne").css('display','none');
-    $("#rePlay").attr('onclick','Start()');
+    $("#rePlay").attr('onclick','start()');
     $("#rePlay").text('시작');
     $("#rePlay").attr('id','Start');
+}
+
+//진동효과
+function activate_vibration(){
+    window.navigator.vibrate(3);
 }
