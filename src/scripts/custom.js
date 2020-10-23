@@ -1018,7 +1018,7 @@ $(document).ready(function(){
         if(generateQR.length){activate_qr_generator();}
 
         //Vibrate Buttons
-        var vibrateButton = $('[data-vibrate]');
+        var Button = $('[data-vibrate]');
         function activate_vibration(){
             $('[data-vibrate]').on('click',function(){var vibrateTime = $(this).data('vibrate'); window.navigator.vibrate(vibrateTime);});
             $('.start-vibrating').on('click',function(){var vibrateTimeInput = $('.vibrate-demo').val(); window.navigator.vibrate(vibrateTimeInput);})

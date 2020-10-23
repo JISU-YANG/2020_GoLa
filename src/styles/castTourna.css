@@ -6,7 +6,6 @@
     height: 30px;
     width: 36px;
 }
-
 .jb-table {
     width: 100%;
     overflow: auto;
@@ -97,21 +96,5 @@
     display: block;
     height: 15px;
     line-height:10px;
-
-}
-
-#Champion1{
-    position: absolute;
-    width: 50px;
-    z-index : 999;
-    top:50%;
-    left:30%;
-}
-#Champion2{
-    position: absolute;
-    width: 50px;
-    z-index : 999;
-    top:50%;
-    right:30%;
 }
 

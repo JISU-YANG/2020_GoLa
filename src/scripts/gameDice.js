@@ -13,7 +13,7 @@ function throwDice(player) {
 
     //코인 5번 미만의 처리
     if(coin[numType] < 6){
-        setDice(player, numMinus);
+        setDice(player, (numRandom==1? numPlus : numMinus));
         document.getElementById("dp"+player).innerHTML += (numRandom==1?"+" + numPlus : numMinus) + "&nbsp;&nbsp;&nbsp";
         sum[numType] = sum[numType] + (numRandom==1? numPlus : numMinus);
         coin[numType]++;
@@ -43,18 +43,19 @@ function throwDice(player) {
     }
 
     //플레이어A,B의 중간 합산 후 높은쪽 표기
-    if(sum[0]>sum[1]){
-        $(".Player1").css('border','1px solid blue');
-        $(".Player2").css('border','');
-    }else if(sum[0]<sum[1]){
-        $(".Player1").css('border','');
-        $(".Player2").css('border','1px solid blue');
-    }else{
-        $(".Player1").css('border','');
-        $(".Player2").css('border','');
+    if(coin[0]!=1 && coin[1]!=1){
+        if(sum[0]>sum[1]){
+            $(".Player1").css('border','1px solid blue');
+            $(".Player2").css('border','');
+        }else if(sum[0]<sum[1]){
+            $(".Player1").css('border','');
+            $(".Player2").css('border','1px solid blue');
+        }else{
+            $(".Player1").css('border','');
+            $(".Player2").css('border','');
+        }
     }
 }
-
 //오토플레이
 function autoPlay(){
     setInterval(function(){
@@ -91,7 +92,6 @@ function setDice(typeDice, countDice){
             $("#four1"+typeDice).css('display','none');
             $("#four2"+typeDice).css('display','none');
             $("#six1"+typeDice).css('display','none');
-            $("#six2"+typeDice).css('display','none');
             break;
         case 4:
             $("#one"+typeDice).css('display','none');

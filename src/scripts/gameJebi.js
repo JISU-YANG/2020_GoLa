@@ -59,6 +59,7 @@ function shuffle(){
         }else{
             indexNo = indexNo +1;
             $(this).attr("src","../images/gameJebi/lots"+indexNo+"-2.png");
+            activate_vibration();
         }
     });
 }
@@ -117,4 +118,9 @@ function shake(){
             }
         );
     }
+}
+
+//진동효과
+function activate_vibration(){
+    window.navigator.vibrate(3);
 }
