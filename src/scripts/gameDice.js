@@ -31,7 +31,7 @@ function throwDice(player) {
     //플레이어A,B의 코인 모두 소진시 승자 결과표기
     if(coin[0]==6 && coin[1]==6){
         if(sum[0]>sum[1]){
-            $(".Player1").css('background','blue');
+            $(".Player1").css('background','red');
             $(".Player2").css('border','');
         }else if(sum[0]<sum[1]){
             $(".Player1").css('border','');
@@ -45,7 +45,7 @@ function throwDice(player) {
     //플레이어A,B의 중간 합산 후 높은쪽 표기
     if(coin[0]!=1 && coin[1]!=1){
         if(sum[0]>sum[1]){
-            $(".Player1").css('border','1px solid blue');
+            $(".Player1").css('border','1px solid red');
             $(".Player2").css('border','');
         }else if(sum[0]<sum[1]){
             $(".Player1").css('border','');
