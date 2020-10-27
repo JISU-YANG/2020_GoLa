@@ -34,10 +34,10 @@ function drawChart() {
 }
 
 function startBottle() {
-    let angle = 360*4+Math.floor(Math.random()*360);
+    let angle = 360*10+Math.floor(Math.random()*360);
 
     let rotate = "rotate(" + angle + "deg)";
-    let trans = "all 0.3s ease-out";
+    let trans = "all 2s ease-out";
     $("#imgBox>img").css({
         "-webkit-transform": rotate,
         "-moz-transform": rotate,
