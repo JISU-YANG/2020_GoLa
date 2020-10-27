@@ -67,8 +67,6 @@ function fire(){
     }else{
         $(".backArea").css('background','red');
         $("#title").text("사망!");
-        $(this).attr("data-vibrate","1");
-        activate_vibration();
         $("#Fire").attr('onclick','rePlay()');
         $("#Fire").text('다시하기');
         $("#Fire").attr('id','rePlay');
@@ -95,9 +93,4 @@ function rePlay(){
     $("#rePlay").attr('onclick','start()');
     $("#rePlay").text('시작');
     $("#rePlay").attr('id','Start');
-}
-
-//진동효과
-function activate_vibration(){
-    window.navigator.vibrate(3);
 }
