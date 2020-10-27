@@ -31,6 +31,7 @@ function shuffle(){
         $("#boardJebi").remove();
         $("#boardResult").show();
         $("#papers").css("height",cnt<=4?100:200);
+        $("#papers").css("text-align","center");
         //꽝, 통과 만들기
         passOrKkwang();
 
@@ -101,7 +102,7 @@ function replay(){
 //제비만들기
 function jebiRemake(){
     for(let i=1; i<=pNum; i++){
-    let jebiPaper = "<img class='jebiPaper' src='../images/gameJebi/lots"+i+".png' style='width:65px; float:left;'>";
+    let jebiPaper = "<img class='jebiPaper' src='../images/gameJebi/lots"+i+".png' style='display:inline-block;width:65px;'>";
         $("#papers").append(jebiPaper);
     }
 }

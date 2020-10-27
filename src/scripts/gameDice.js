@@ -25,6 +25,8 @@ function throwDice(player) {
     if(coin[numType] == 6){
         document.getElementById("dpSum"+player).innerHTML = sum[numType];
         $("#autoButton").text('다시하기');
+        $("#autoButton").removeClass('border-blue-dark bg-blue-light');
+        $("#autoButton").addClass('border-red-dark bg-red-light');
         $("#autoButton").attr('onclick','location.reload();');
     }
 
