@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="kr">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"/>
     <title>GoLA</title>
     <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
@@ -12,11 +13,14 @@
     <link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
     <!--    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">-->
     <!-- CDN Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
 </head>
 <body class="theme-light">
 
-<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+<div id="preloader">
+    <div class="spinner-border color-highlight" role="status"></div>
+</div>
 
 <div id="page">
     <div class="page-content">
@@ -37,9 +41,8 @@
                 <img class="muzzle" id="muzzle" src="../images/gameRussian/muzzle.png">
                 <h1 id="title"></h1>
                 <div id="handle"></div>
-                <div id="buttonBox">
-                    <button id="Start" class="btn btn-s font-600 font-12 rounded-m gradient-green" onclick="start()">시작</button>
-                </div>
+                <a href="#" id="Start" onclick="start()"
+                   class="btn btn-3d btn-m btn-full mb-3 rounded-xs text-uppercase font-900 shadow-s border-blue-dark bg-blue-light">시작</a>
 
             </div>
         </div>
@@ -58,7 +61,7 @@
 
 <script type="text/javascript">
     var cnt = request.getParameter('cnt');
-    $("#displayCnt").append("인원 "+cnt+"명");
+    $("#displayCnt").append("인원 " + cnt + "명");
 
 
 </script>
