@@ -5,7 +5,25 @@ $("#displayCnt").append("인원 " + cnt + "명");
 
 printInput();
 var NameBox = new Array(cnt);
+function setPreset() {
+    let fixedHeith;
+    let imgUrl;
 
+    if (cnt==4){
+        fixedHeith = 210;
+        imgUrl = '../images/castTourna/4.png';
+    }else{
+        fixedHeith = 300;
+        imgUrl = '../images/castTourna/8.png';
+    }
+
+    $(".jb-table").css("width",260);
+    $(".jb-table").css("height",fixedHeith);
+    $(".jb-table").css("margin-left",(($(".jb-table").css("width").replace("px",""))-260)/2);
+    $(".jb-table").css({"background":"url("+imgUrl+")"});
+    $(".jb-table").css({"background-position":"center center"});
+    $(".jb-table").css({"background-size":"100% 100%"});
+}
 function printInput() {
     for (let i = cnt; i > 0; i--) {
         let textPenaltyCode =
@@ -20,6 +38,8 @@ function printInput() {
 }
 
 function startTourna(){
+    setPreset();
+
     //입력한 이름 배열에 넣기
     for (let i = 0; i < cnt; i++){
         NameBox[i] = $(".name").eq(i).val();
