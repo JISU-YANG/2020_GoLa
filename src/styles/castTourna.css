@@ -1,7 +1,7 @@
 .jb-table-cell-value{
     display: inline-block;
     border-collapse: collapse;
-    font-size:9px;
+    font-size :9px;
     height: 30px;
     width: 36px;
 }
